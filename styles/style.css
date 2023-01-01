@@ -1,0 +1,220 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap");
+
+* {
+  box-sizing: border-box;
+  color: white;
+  font-family: "Raleway", sans-serif;
+}
+
+body {
+  margin: 0;
+  background-color: #c7d6de;
+  background-color: rgb(26, 29, 41);
+}
+
+body h1 {
+  text-align: center;
+}
+
+main {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#catalog {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.card-wrapper {
+  position: relative;
+  display: flex;
+  width: 46vw;
+  min-width: 630px;
+  max-width: 660px;
+  height: 300px;
+  overflow: hidden;
+  border-radius: 10px;
+  transition: all 0.4s;
+  box-shadow: rgba(0, 0, 0, 0.69) 0px 26px 30px -10px, rgba(0, 0, 0, 0.73) 0px 16px 10px -10px;
+  padding: 16px;
+  border: 1px solid white;
+}
+
+.card-wrapper:hover {
+  transform: scale(1.02);
+  transition: all 0.4s;
+}
+
+.card-background img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: auto;
+  filter: blur(50px);
+}
+
+/* .card-wrapper img {
+  float: left;
+  height: 70px;
+} */
+
+.card-poster {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-poster img {
+  width: 80%;
+  height: 150px;
+  border-radius: 4px;
+  box-shadow: rgba(0, 0, 0, 0.69) 0px 26px 30px -10px, rgba(0, 0, 0, 0.73) 0px 16px 10px -10px;
+}
+
+/* Card Info */
+.card-info {
+  width: 100%;
+}
+
+.card-wrapper p {
+  font-size: 12px;
+  margin: 0;
+}
+
+/* Parent Rating */
+.classificacao {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border: 1px solid white;
+  border-radius: 4px;
+}
+
+.rated-green {
+  background-color: rgb(0, 103, 0);
+}
+
+.rated-yellow {
+  background-color: rgb(210, 210, 0);
+}
+
+.rated-red {
+  background-color: rgb(168, 0, 0);
+}
+
+.movie-title {
+  font-size: 24px;
+  margin: 0 0 12px;
+}
+
+/* Rating System */
+.rating-system {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Star Review Rating */
+.star-ratings {
+  unicode-bidi: bidi-override;
+  color: #ccc;
+  font-size: 14px;
+  line-height: 26px;
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+
+.fill-ratings {
+  padding: 0;
+  position: absolute;
+  z-index: 1;
+  display: block;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+}
+
+.fill-ratings span {
+  display: inline-block;
+  width: 100%;
+  color: #e7711b;
+}
+
+.empty-ratings {
+  padding: 0;
+  display: block;
+  z-index: 0;
+}
+
+/* Títulos Similares */
+.similar-movies {
+  display: flex;
+  gap: 8px;
+  padding: 0;
+  margin: 8px 0;
+}
+
+.similar-titles {
+  list-style-type: none;
+}
+
+.similar-titles img {
+  width: 80px;
+  border-radius: 4px;
+  box-shadow: rgba(0, 0, 0, 0.69) 0px 26px 30px -10px, rgba(0, 0, 0, 0.73) 0px 16px 10px -10px;
+}
+
+/* Text Desciption */
+.movie-title,
+.movie-genero {
+  max-width: 80%;
+}
+
+.similars-title,
+.cast-title {
+  margin: 12px 0 8px;
+}
+
+.movie-title,
+.movie-genero,
+.movie-descicao,
+.movie-elenco,
+.similars-title,
+.cast-title {
+  text-shadow: 1px 1px 1px black;
+}
+
+.movie-elenco {
+  padding-bottom: 4px;
+}
+
+@media screen and (max-width: 690px) {
+  .card-wrapper {
+    flex-direction: column;
+    width: calc(100% - 32px);
+    min-width: unset;
+    height: 460px;
+  }
+
+  .card-poster {
+    margin-bottom: 16px;
+  }
+
+  .rating-system {
+    top: 186px;
+  }
+}
